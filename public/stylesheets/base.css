@@ -5,6 +5,7 @@
 
 /* =global elements
 --------------------------------------------- */
+
 body {
   color: #999;
   font: 14px/1.5em "Lucida Grande", Arial, sans-serif;
@@ -12,11 +13,7 @@ body {
   width: 720px;
   margin: 20px;
   
-  background: url('/images/dumbo_view.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
 }
 
 #splash-text {
