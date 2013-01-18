@@ -11,6 +11,17 @@ body {
   -webkit-font-smoothing: antialiased;
   width: 720px;
   margin: 20px;
+  
+  background: url('/images/dumbo_view.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#splash-text {
+  color:#fff;
+  text-align:center;
 }
 
 a:link, a:visited {
