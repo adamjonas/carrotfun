@@ -1,12 +1,19 @@
-require "sinatra"
+require 'sinatra'
 require 'koala'
 # require_relative 'env.rb'
 
+### Configuration
 enable :sessions
 set :raise_errors, false
 set :show_exceptions, false
 
 FACEBOOK_SCOPE = 'user_likes,user_photos'
+class MyApp < Sinatra::Base
+  configure :development do
+    ENV["FACEBOOK_APP_ID"]='121849091319483'
+    ENV["FACEBOOK_SECRET"]='8e01ce537633ba7bc7b1080ac2133579'
+  end
+end
 
 unless ENV["FACEBOOK_APP_ID"] && ENV["FACEBOOK_SECRET"]
   abort("missing env vars: please set FACEBOOK_APP_ID and FACEBOOK_SECRET with your app credentials")
@@ -48,6 +55,7 @@ error(Koala::Facebook::APIError) do
   redirect "/auth/facebook"
 end
 
+### Controllers
 get "/" do
   # Get base API Connection
   @graph  = Koala::Facebook::API.new(session[:access_token])
@@ -72,6 +80,25 @@ post "/" do
   redirect "/"
 end
 
+get "/demo" do
+  # Get base API Connection
+  @graph  = Koala::Facebook::API.new(session[:access_token])
+
+  # Get public details of current application
+  @app  =  @graph.get_object(ENV["FACEBOOK_APP_ID"])
+
+  if session[:access_token]
+    @user    = @graph.get_object("me")
+    @friends = @graph.get_connections('me', 'friends')
+    @photos  = @graph.get_connections('me', 'photos')
+    @likes   = @graph.get_connections('me', 'likes').first(4)
+
+    # for other data you can always run fql
+    @friends_using_app = @graph.fql_query("SELECT uid, name, is_app_user, pic_square FROM user WHERE uid in (SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1")
+  end
+  erb :index_other
+end
+
 # used to close the browser window opened to post to wall/send to friends
 get "/close" do
   "<body onload='window.close();'/>"
@@ -91,3 +118,5 @@ get '/auth/facebook/callback' do
 	session[:access_token] = authenticator.get_access_token(params[:code])
 	redirect '/'
 end
+
+

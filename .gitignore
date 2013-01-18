@@ -2,4 +2,4 @@
 log/
 .rvmrc
 .DS_Store
-env.rb
+.env

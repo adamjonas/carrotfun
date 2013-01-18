@@ -5,8 +5,8 @@
 <title>Give Me a Job</title>
 <link type="text/css" rel="stylesheet" href="stylesheets/index.css" />
 <link type="text/css" rel="stylesheet" href="stylesheets/base.css" />
-</head>
-<body>
+<script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
+
 <script type="text/javascript">
       function logResponse(response) {
         if (console && console.log) {
@@ -62,50 +62,59 @@
         });
       });
     </script>
+</head>
+<body>
+<div id="page-wrapper">
 
-<!-- <img src="dumbo.jpg" alt="scenary" /> -->
-<h1 id='splash-text'>Adam Jonas' Give Me a Job/ Thank You Splash Page</h1>
+<div id="fb-root"></div>
+<script type="text/javascript">
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : "<%= @app['id'] %>",                     // App ID
+      channelUrl : "<%= url_no_scheme('/channel.html') %>", // Channel File
+      status     : true,                                    // check login status
+      cookie     : true,                                    // enable cookies to allow the server to access the session
+      xfbml      : true                                     // parse XFBML
+    });
 
+    // Listen to the auth.login which will be called when the user logs in
+    // using the Login button
+    FB.Event.subscribe('auth.login', function(response) {
+      // We want to reload the page now so Ruby can read the cookie that the
+      // Javascript SDK sat. But we don't want to use
+      // window.location.reload() because if this is in a canvas there was a
+      // post made to this page and a reload will trigger a message to the
+      // user asking if they want to send data again.
+      window.location = window.location;
+    });
 
-      <% if @user %>
-          <p id="picture" style="background-image: url(https://graph.facebook.com/<%= @user['id'] %>/picture?type=normal)"></p>
-          <div>
-            <h1>Welcome, <strong><%= @user['name'] %></strong></h1>
-            <p class="tagline">
-              This is your app
-              <a href="<%= @app['@app'] %>"><%= @app['name'] %></a>
-            </p>
-            <div id="share-app">
-              <p>Share your app:</p>
-              <ul>
-                <li>
-                  <a href="#" class="facebook-button" id="postToWall" data-url="<%= url %>">
-                    <span class="plus">Post to Wall</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="<%= url %>">
-                    <span class="speech-bubble">Send Message</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Test this awesome app">
-                    <span class="apprequests">Send Requests</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-      <% else %>
-        <div>
-          <h1>Hey!</h1>
-            <a href='/auth/facebook' class="fb_button fb_button_medium">
-              <span class="fb_button_text">Log In with Facebook</span>
-            </a>
-        </div>
+    FB.Canvas.setAutoGrow();
+  };
 
-      <% end %>
-    
+  // Load the SDK Asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 
+  <h1 id='splash-text'>Adam Jonas' Give Me a Job/ Thank You Splash Page</h1>
+
+  <div class='box'>
+    <%= erb :adam %>
+  </div>
+  
+  <div class='box' id='shared'>
+    <%= erb :adam %>
+  </div>
+
+  <div class='box'>
+    <%= erb :adam %>
+  </div>
+
+</div>
 </body>
 </html>

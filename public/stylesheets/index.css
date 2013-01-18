@@ -6,7 +6,46 @@ body {
   background-size: cover;
 }
 
+#page-wrapper {
+  width: 1040px;
+  margin: 0 auto;
+}
+
 #splash-text {
   color: #fff;
   text-align:center;
+}
+
+#your-likes {
+  
+}
+
+ul { 
+  list-style-type: none;
+} 
+
+.box {
+  background-color: white;
+  float:left;
+  width: 30%;
+  margin-right: 5%;
+  box-sizing: border-box;
+}
+
+#shared {
+  border: 5px purple solid;
+  background: url('/images/carrot.png') no-repeat; 
+  background-size: 120%;
+}
+
+.box:last-child {
+  margin-right: 0px;
+}
+
+#guides {
+  background-color: white;
+}
+
+.list {
+  background-color: white;
 }
