@@ -1,6 +1,6 @@
 require "sinatra"
 require 'koala'
-require_relative 'env.rb'
+# require_relative 'env.rb'
 
 enable :sessions
 set :raise_errors, false
