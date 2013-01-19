@@ -1,0 +1,34 @@
+<% if @user %>
+    
+    <div>
+      <p id="picture" style="background-image: url(https://graph.facebook.com/<%= @user['id'] %>/picture?type=normal)"></p>
+      <h1 class='splash-text'>Welcome, <strong><%= @user['name'] %></strong></h1>
+      
+      
+        <p class='splash-text'>It OK to post this on Facebook. It's work related.</p>
+        <ul>
+          <li>
+            <a href="#" class="facebook-button" id="postToWall" data-url="<%= url %>">
+              <span class="plus">Post to Wall</span>
+            </a>
+          </li>
+         <!--  <li>
+            <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="<%#= url %>">
+              <span class="speech-bubble">Send Message</span>
+            </a>
+          </li> -->
+         <!--  <li>
+            <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Test this awesome app">
+              <span class="apprequests">Send Requests</span>
+            </a>
+          </li> -->
+        </ul>
+    
+</div>
+<% else %>
+    <!-- <h1 class='splash-text'>Hey!</h1> -->
+      <a href='/auth/facebook' class="fb_button fb_button_large">
+        <span class="fb_button_text">Log In with Facebook</span>
+      </a>
+   </div>   
+<% end %>
