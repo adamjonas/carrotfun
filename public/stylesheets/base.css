@@ -7,11 +7,7 @@
 --------------------------------------------- */
 
 body {
-  background: url('/images/dumbo_view.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
   color: #999;
   font: 14px/1.5em "Lucida Grande", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -61,7 +57,7 @@ header h1 {
 }
 
 header #picture + div {
-  margin-left: 82px;
+  
 }
 
 header #picture {
@@ -210,7 +206,7 @@ header .tagline {
 #samples .list {
   float: left;
   margin-right: 3px;
-  width: 172px;
+  width: 100%;
 }
 
 #guides ul li p,

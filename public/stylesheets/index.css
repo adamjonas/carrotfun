@@ -11,9 +11,14 @@ body {
   margin: 0 auto;
 }
 
-#splash-text {
+.splash-text {
+  color: #fff;
+}
+
+#splash-title {
   color: #fff;
   text-align:center;
+  font-size: 56px;
 }
 
 #your-likes {
@@ -48,4 +53,88 @@ ul {
 
 .list {
   background-color: white;
+}
+
+.full-circle {
+ background-color: #c06;
+ border: 3px solid #333;
+ height: 250px;
+ -moz-border-radius:125px;
+ -webkit-border-radius: 125px;
+ width: 250px;
+ margin-right: 135px;
+ float:left;
+}
+
+.full-circle:last-child {
+  margin-right: 0px;
+}
+
+#first-circle {
+  background: url('/images/carrot.png') no-repeat; 
+  background-size: 100%;
+  background-color: white;
+
+  line-height: 0px;
+  color: transparent;
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+     font-weight: 300;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+#first-circle:hover {
+  line-height: 133px;
+  color: black;
+  position: relative; 
+  left: -60px;
+}
+
+#second-circle {
+  background: url('/images/carrot_plate.jpg') no-repeat -36px -45px; 
+  background-size: 130%;
+
+  line-height: 0px;
+  color: transparent;
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+     font-weight: 300;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+#second-circle:hover {
+  line-height: 133px;
+  color: black;
+  position: relative; 
+  top: -60px;
+}
+
+#third-circle {
+  background: url('/images/funny_carrot.jpg') no-repeat -88px -5px;
+  background-size: 135%;
+
+  line-height: 0px;
+  color: transparent;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+     font-weight: 300;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+#third-circle:hover {
+  line-height: 133px;
+  color: black;
+  position: relative; 
+  right: -60px;
+}
+
+#circles {
+  margin-top: 200px;
 }
