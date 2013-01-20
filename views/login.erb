@@ -12,16 +12,13 @@
       <h1 class='splash-text'>
       <img src="https://graph.facebook.com/<%= @user['id'] %>/picture?type=square" alt="<%= @user['name'] %>">
       Hey, <strong><%= @user['name'] %></strong></h1>
-        <p class='splash-text'>You can't get in trouble for writing about this on your Facebook wall...<br> It's work related.</p>
-        <ul>
+        <!-- <strong><p class='splash-login'>You can't get in trouble for using this... It's work related.</p></strong> -->
+    </div>
+    <div id='login'>    
+        <ul id='button'>
           <li>
             <a href="#" class="facebook-button" id="postToWall" data-url="<%= url %>">
-              <span class="uibutton">Post to Wall</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Test this awesome app">
-              <span class="apprequests">Send to a Friend</span>
+              <span class="plus">Post to Wall</span>
             </a>
           </li>
         </ul>
@@ -29,7 +26,7 @@
 
 
 <% else %>
-    <h1 class='splash-text'><strong><em>(So you asked if I used Facebook and Sinatra much. Well I have now...)</em></strong></h1>
+    <h1 class='splash-text'><strong><em>You asked if I used Facebook and Sinatra much. Well I've done a little more now...</em></strong></h1>
       <a href='/auth/facebook' class="fb_button fb_button_large">
         <span class="fb_button_text">Log In with Facebook</span>
       </a>

@@ -13,11 +13,21 @@ body {
 
 .splash-text {
   color: #fff;
-  width: 350px;
+  width: 250px;
+}
+
+.splash-login {
+  color: #fff;
+  width: 300px;
+  float: left;
 }
 
 #login a {
   margin-left: -40px;
+}
+
+#button {
+  clear: both;
 }
 
 #logout {
@@ -26,13 +36,10 @@ body {
 }
 
 #splash-title {
-  color: #fff;
   text-align:center;
-  font-size: 56px;
-}
-
-#your-likes {
-  
+  margin-left: 100px;
+  margin-bottom: -150px;
+  margin-top: -100px;
 }
 
 ul { 
@@ -72,7 +79,7 @@ ul {
  -moz-border-radius:125px;
  -webkit-border-radius: 125px;
  width: 250px;
- margin-right: 100px;
+ margin-right: 60px;
  float:left;
 }
 
@@ -95,7 +102,7 @@ ul {
   background-color: white;
 
   line-height: 0px;
-  margin-left: 35px;
+  margin-left: 65px;
   color: transparent;
   font-size: 20px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -112,7 +119,7 @@ ul {
   width: 375px;
   height: 300px;
   
-  margin-right: -25px;
+  margin-right: -65px;
   line-height: 30px;
   color: white;
   font-style: bold;
@@ -140,14 +147,15 @@ ul {
   background: url('/images/main_st_brooklyn_light.png') no-repeat -20px;
   background-size: 235%;
   background-color: white;
-  width: 300px;
-  height: 370px;
+  width: 320px;
+  height: 390px;
   margin-left: -50px;
+
   line-height: 30px;
   color: black;
   font-size: 22px;
   position: relative; 
-  top: -155px;
+  top: -135px;
 }
 
 #second-circle h3 {
@@ -171,10 +179,10 @@ ul {
 
 #third-circle:hover {
   background: url('/images/dumbo_view_dark.jpg') no-repeat -88px -5px;
-  background-size: 140%;
+  background-size: 155%;
 
   width: 370px;
-  height: 330px;
+  height: 280px;
   margin-left: -100px;
   line-height: 30px;
   color: white;
