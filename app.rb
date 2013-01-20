@@ -103,7 +103,6 @@ get "/exp" do
   erb :experiment
 end
 
-# used to close the browser window opened to post to wall/send to friends
 get "/close" do
   "<body onload='window.close();'/>"
 end

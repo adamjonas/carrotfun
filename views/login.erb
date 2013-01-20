@@ -1,31 +1,35 @@
 <% if @user %>
     
+  <div id='logout'>
+    <a href='/sign_out' class="fb_button fb_button_large">
+      <span class="fb_button_text">Log Out</span>
+    </a>
+  </div>
+
+
+
     <div id='login'>
       <h1 class='splash-text'>
       <img src="https://graph.facebook.com/<%= @user['id'] %>/picture?type=square" alt="<%= @user['name'] %>">
       Hey, <strong><%= @user['name'] %></strong></h1>
-        <p class='splash-text'>It OK to post this on Facebook. It's work related.</p>
+        <p class='splash-text'>You can't get in trouble for writing about this on your Facebook wall...<br> It's work related.</p>
         <ul>
           <li>
             <a href="#" class="facebook-button" id="postToWall" data-url="<%= url %>">
-              <span class="plus">Post to Wall</span>
+              <span class="uibutton">Post to Wall</span>
             </a>
           </li>
-         <!--  <li>
-            <a href="#" class="facebook-button speech-bubble" id="sendToFriends" data-url="<%#= url %>">
-              <span class="speech-bubble">Send Message</span>
-            </a>
-          </li> -->
-         <!--  <li>
+          <li>
             <a href="#" class="facebook-button apprequests" id="sendRequest" data-message="Test this awesome app">
-              <span class="apprequests">Send Requests</span>
+              <span class="apprequests">Send to a Friend</span>
             </a>
-          </li> -->
+          </li>
         </ul>
-    
-</div>
+    </div>
+
+
 <% else %>
-    <!-- <h1 class='splash-text'>Hey!</h1> -->
+    <h1 class='splash-text'><strong><em>(So you asked if I used Facebook and Sinatra much. Well I have now...)</em></strong></h1>
       <a href='/auth/facebook' class="fb_button fb_button_large">
         <span class="fb_button_text">Log In with Facebook</span>
       </a>

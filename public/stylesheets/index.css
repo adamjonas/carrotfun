@@ -13,10 +13,16 @@ body {
 
 .splash-text {
   color: #fff;
+  width: 350px;
 }
 
 #login a {
   margin-left: -40px;
+}
+
+#logout {
+  text-align: right;
+  float: right; 
 }
 
 #splash-title {
@@ -100,11 +106,13 @@ ul {
 }
 
 #first-circle:hover {
-  background-color: black;
+  background: url('/images/dumbo_grey.jpg') no-repeat; 
+  background-size: 130%;
+
   width: 375px;
   height: 300px;
-  background: black;
-  margin-right: 0;
+  
+  margin-right: -25px;
   line-height: 30px;
   color: white;
   font-style: bold;
@@ -133,11 +141,11 @@ ul {
   background-size: 235%;
   background-color: white;
   width: 300px;
-  height: 400px;
+  height: 370px;
   margin-left: -50px;
   line-height: 30px;
   color: black;
-  font-style: bold;
+  font-size: 22px;
   position: relative; 
   top: -155px;
 }
@@ -162,17 +170,22 @@ ul {
 }
 
 #third-circle:hover {
-  background: url('/images/dumbo_view.jpg') no-repeat -88px -5px;
-  background-size: 200%;
+  background: url('/images/dumbo_view_dark.jpg') no-repeat -88px -5px;
+  background-size: 140%;
 
-  width: 350px;
-  height: 300px;
+  width: 370px;
+  height: 330px;
   margin-left: -100px;
   line-height: 30px;
   color: white;
+  font-size: 24px;
   position: relative; 
   right: -40px;
   top: -50px;
+}
+
+#check {
+  font-size: 20px;
 }
 
 #circles {
