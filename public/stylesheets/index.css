@@ -116,7 +116,7 @@ ul {
   background: url('/images/dumbo_grey.jpg') no-repeat; 
   background-size: 130%;
 
-  width: 375px;
+  width: 370px;
   height: 290px;
   
   margin-right: -65px;
@@ -180,7 +180,6 @@ ul {
 #third-circle:hover {
   background: url('/images/dumbo_view_dark.jpg') no-repeat -88px -5px;
   background-size: 155%;
-
   width: 370px;
   height: 300px;
   margin-left: -100px;
