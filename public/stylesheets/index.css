@@ -15,6 +15,10 @@ body {
   color: #fff;
 }
 
+#login a {
+  margin-left: -40px;
+}
+
 #splash-title {
   color: #fff;
   text-align:center;
@@ -62,8 +66,17 @@ ul {
  -moz-border-radius:125px;
  -webkit-border-radius: 125px;
  width: 250px;
- margin-right: 135px;
+ margin-right: 100px;
  float:left;
+}
+
+.full-circle h3 {
+  text-align: center;
+}
+
+.full-circle p {
+  margin-left: 20px;
+  line-height: 24px;
 }
 
 .full-circle:last-child {
@@ -76,6 +89,7 @@ ul {
   background-color: white;
 
   line-height: 0px;
+  margin-left: 35px;
   color: transparent;
   font-size: 20px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -86,11 +100,19 @@ ul {
 }
 
 #first-circle:hover {
-  line-height: 133px;
-  color: black;
+  background-color: black;
+  width: 375px;
+  height: 300px;
+  background: black;
+  margin-right: 0;
+  line-height: 30px;
+  color: white;
+  font-style: bold;
   position: relative; 
-  left: -60px;
+  left: -150px;
+  top: -50px;
 }
+
 
 #second-circle {
   background: url('/images/carrot_plate.jpg') no-repeat -36px -45px; 
@@ -107,10 +129,21 @@ ul {
 }
 
 #second-circle:hover {
-  line-height: 133px;
+  background: url('/images/main_st_brooklyn_light.png') no-repeat -20px;
+  background-size: 235%;
+  background-color: white;
+  width: 300px;
+  height: 400px;
+  margin-left: -50px;
+  line-height: 30px;
   color: black;
+  font-style: bold;
   position: relative; 
-  top: -60px;
+  top: -155px;
+}
+
+#second-circle h3 {
+  margin-top: 50px;
 }
 
 #third-circle {
@@ -129,10 +162,17 @@ ul {
 }
 
 #third-circle:hover {
-  line-height: 133px;
-  color: black;
+  background: url('/images/dumbo_view.jpg') no-repeat -88px -5px;
+  background-size: 200%;
+
+  width: 350px;
+  height: 300px;
+  margin-left: -100px;
+  line-height: 30px;
+  color: white;
   position: relative; 
-  right: -60px;
+  right: -40px;
+  top: -50px;
 }
 
 #circles {

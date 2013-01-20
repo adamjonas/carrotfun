@@ -1,10 +1,9 @@
 <% if @user %>
     
-    <div>
-      <p id="picture" style="background-image: url(https://graph.facebook.com/<%= @user['id'] %>/picture?type=normal)"></p>
-      <h1 class='splash-text'>Welcome, <strong><%= @user['name'] %></strong></h1>
-      
-      
+    <div id='login'>
+      <h1 class='splash-text'>
+      <img src="https://graph.facebook.com/<%= @user['id'] %>/picture?type=square" alt="<%= @user['name'] %>">
+      Hey, <strong><%= @user['name'] %></strong></h1>
         <p class='splash-text'>It OK to post this on Facebook. It's work related.</p>
         <ul>
           <li>
