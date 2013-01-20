@@ -4,20 +4,19 @@
     <a href='/sign_out' class="fb_button fb_button_large">
       <span class="fb_button_text">Log Out</span>
     </a>
-    <strong><p class='splash-login'>So I get that you don't <em>NEED<em> to authenticate. Just figured I'd try it with Koala.</p></strong>
+    <strong><p class='splash-login'>So I get that you don't <em>NEED<em> to authenticate to post to FB, but I figured I'd try it with Koala.</p></strong>
   </div>
 
     <div id='login'>
       <h1 class='splash-text'>
       <img src="https://graph.facebook.com/<%= @user['id'] %>/picture?type=square" alt="<%= @user['name'] %>">
       Hey, <strong><%= @user['name'] %></strong></h1>    
-        <ul id='button'>
-          <li>
-            <a href="#" class="facebook-button" id="postToWall" data-url="<%= url %>">
+          <div id='post'>
+              <a href="#" class="facebook-button" id="postToWall" data-url="<%= url %>">
               <span class="plus">Post to Wall</span>
             </a>
-          </li>
-        </ul>
+          </div>
+        
     </div>
 
 
