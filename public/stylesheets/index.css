@@ -4,12 +4,51 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+#wrap {
+/*  background: #000;*/
 }
 
 #page-wrapper {
-  width: 1040px;
+  width: 980px;
+  margin: 0 auto;
+  text-align:center;
+}
+
+#page-wrapper h1 {
+  color: #fff;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+#page-wrapper h3 {
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+}
+.avatar {
+  position: relative;
+  width: 200px;  
   margin: 0 auto;
 }
+
+
+.copy {
+  color: #fff;
+  font-size: 20px;
+}
+
+.avatar .carrot {width: 50px; position: absolute; top: 191px; left: 82px; z-index: 10; -webkit-transition: all .5s ease}
+.avatar .carrot:hover {
+  -webkit-transform: rotate(360deg);
+  cursor: pointer;
+}
+.avatar .adam {border: 8px solid #fff; width: 200px;}
+
+
 
 .splash-text {
   color: #fff;

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>I'm a big fan of carrots</title>
+<title>We like you too, Adam</title>
 <link type="text/css" rel="stylesheet" href="stylesheets/index.css" />
 <link type="text/css" rel="stylesheet" href="stylesheets/base.css" />
 <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
@@ -21,126 +21,22 @@
   })();
 
 </script>
-
-<script type="text/javascript">
-      function logResponse(response) {
-        if (console && console.log) {
-          console.log('The response was', response);
-        }
-      }
-
-      $(function(){
-        // Set up so we handle click on the buttons
-        $('#postToWall').click(function() {
-          FB.ui(
-            {
-              method : 'feed',
-              link   : $(this).attr('data-url')
-            },
-            function (response) {
-              // If response is null the user canceled the dialog
-              if (response != null) {
-                logResponse(response);
-              }
-            }
-          );
-        });
-
-        $('#sendToFriends').click(function() {
-          FB.ui(
-            {
-              method : 'send',
-              link   : $(this).attr('data-url')
-            },
-            function (response) {
-              // If response is null the user canceled the dialog
-              if (response != null) {
-                logResponse(response);
-              }
-            }
-          );
-        });
-
-        $('#sendRequest').click(function() {
-          FB.ui(
-            {
-              method  : 'apprequests',
-              message : $(this).attr('data-message')
-            },
-            function (response) {
-              // If response is null the user canceled the dialog
-              if (response != null) {
-                logResponse(response);
-              }
-            }
-          );
-        });
-      });
-    </script>
 </head>
 <body>
-    <div>
-      <%= erb :login %>
-    </div>
+  <div id="wrap">
   <div id="page-wrapper">
-
-    <div id="fb-root"></div>
-      <script type="text/javascript">
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : "<%= @app['id'] %>",                     // App ID
-            channelUrl : "<%= url_no_scheme('/channel.html') %>", // Channel File
-            status     : true,                                    // check login status
-            cookie     : true,                                    // enable cookies to allow the server to access the session
-            xfbml      : true                                     // parse XFBML
-          });
-
-          
-          FB.Event.subscribe('auth.login', function(response) {
-          
-            window.location = window.location;
-          });
-
-          FB.Canvas.setAutoGrow();
-        };
-
-        // Load the SDK Asynchronously
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      </script>
-
-      
-      <img id='splash-title' src="images/carrot_greeter.png" alt="Hello">
-
-      <div id='circles'>
-        <div class='full-circle' id='first-circle'>
-          <h3>I was really impressed</h3>
-          <p>I was blown away by Carrot. It is refreshing that you consider your fellow employees as part of your 'family.' I just hope you aren't talking about that crazy second-cousin that you don't want to be left alone with...</p>
-        </div>
-
-        <div class='full-circle' id='second-circle'>
-          <h3>Putting down roots<br>(pun intended)<br>in Dumbo</h3>
-          <p>I like that Carrot is legitimately invested in the local community. And if <em>It's Always Sunny</em> has taught me anything, it is that good things happen under a bridge.</p>
-        </div>
-
-        <div class='full-circle' id='third-circle'>
-          <h3>Things I can get<br>on board with</h3>
-          <p id='check'>
-          <strong>
-          &#10003; A kegerator<br>
-          &#10003; OK to wear a sweatshirt<br>
-          &#10003; An office dog, with my last name<br>
-          &#10003; Retired Jackie Robinson Jersey<br>
-          &#10003; '90s music on repeat<br>
-          </p></strong>
-        </div>
-      </div>
-
+    <h1>We like you too, Adam</h1>
+    
+    <div class="avatar">
+      <img src="http://condor.wesleyan.edu/openmedia/athletics/0304wrestmugs/jonas,a04.jpg" class="adam">  
+      <img src="https://si0.twimg.com/profile_images/1631179529/avatar_carrot.jpg" class="carrot">
+    </div>
+    
+    <div class="copy">
+      <h3>So much so, we'd like to offer you a job!</h3>
+      <p>So bring your singlet and come join us</p>
+    </div>  
+    </div>
     </div>
   </body>
 </html>
